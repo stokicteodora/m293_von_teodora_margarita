@@ -1,0 +1,261 @@
+/* ============================================================
+   File: style.css
+   Project: Rezepte für Kinder
+   Authors: Teodora Stokic & Margarita Grigoreva
+   Date: 09.03.2026
+   Description: tylesheet for all recipe pages
+   ============================================================ */
+
+
+/* GOOGLE FONT IMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* BROWSER RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* HTML ELEMENTS */
+
+body {
+    background-color: rgb(183, 214, 244);
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin: 80px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: rgb(90, 132, 230);
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated clouds */
+.cloud {
+    position: absolute;
+    width: 80px;
+    z-index: 0;
+    animation: moveCloud 8s infinite alternate ease-in-out;
+}
+
+.cloud1 { top: 140px; left: 80%; }
+.cloud2 { top:  60px; left: 15%; }
+.cloud3 { top:  25px; left: 28%; }
+.cloud4 { top:  30px; left: 40%; }
+.cloud5 { top: 130px; left: 50%; }
+.cloud6 { top:  50px; left: 60%; }
+.cloud7 { top:  30px; left: 75%; }
+.cloud8 { top: 120px; left: 20%; }
+.cloud9 { top: 145px; left: 70%; }
+
+/* Decorative stars */
+.star {
+    position: absolute;
+    width: 25px;
+    z-index: 0;
+}
+
+.star1 { top:  70px; left: 25%; }
+.star2 { top: 140px; left: 45%; }
+.star3 { top: 120px; left: 72%; }
+.star4 { top:  40px; left: 36%; }
+.star5 { top:  55px; left: 55%; }
+
+/* Cloud floating animation */
+@keyframes moveCloud {
+    from { transform: translateX(0); }
+    to   { transform: translateX(20px); }
+}
+
+/* Logo */
+.logo {
+    margin: -10px 0 0 0;
+}
+
+.logo img {
+    height: 130px;
+    width: 150px;
+}
+
+/* Header title text */
+.titel {
+    margin: 20px 20px 0 20px;
+}
+
+/* Navigation arrows and menu icon */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+nav img {
+    height: 38px;
+    width: 38px;
+}
+
+
+/* CONTENT AREA */
+
+/* Links in main content */
+main a {
+    color: rgb(44, 19, 88);
+}
+
+main a:hover {
+    color: rgba(1, 36, 3, 0.5);
+    transition: 0.5s;
+}
+
+/* Two-column layout sections */
+section {
+    width: calc(50% - 40px);
+}
+
+section img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Welcome box on homepage */
+.welcome {
+    margin: 60px 120px 0 120px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(29, 139, 3);
+    padding: 40px;
+    color: rgb(6, 27, 1);
+    position: relative;
+    overflow: visible;
+    z-index: 3;
+}
+
+/* Decorative grass & train on homepage */
+.grass {
+    width: 50%;
+    position: absolute;
+    top: 142%;
+    left: 0;
+    z-index: 1;
+}
+
+.grass2 {
+    width: 50%;
+    position: absolute;
+    top: 142%;
+    left: 50%;
+    z-index: 1;
+}
+
+.train {
+    width: 30%;
+    position: absolute;
+    top: 128%;
+    right: 0;
+    z-index: 0;
+}
+
+
+/* TEXT ELEMENTS */
+
+h1 {
+    font-size: 3em;
+    line-height: 1.25em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    margin: 5px 0 10px 0;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 40px 0 20px 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    color: rgb(44, 19, 88);
+}
+
+p {
+    margin: 10px 0 20px 0;
+    color: rgb(0, 0, 0);
+}
+
+strong {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.caption {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 20px 0;
+}
+
+hr {
+    border-top: 0.5px solid rgb(0, 0, 0);
+    margin: 20px 0;
+}
+
+ul {
+    margin: 0 0 20px 15px;
+}
+
+::selection {
+    background: rgb(105, 148, 111);
+    color: rgb(255, 255, 255);
+}
+
+
+/* DECORATIVE HEADER IMAGES  */
+
+.ladybug {
+    width: 100px;
+    position: absolute;
+    top: 45px;
+    right: 420px;
+    z-index: 1;
+}
+
+.pizza {
+    width: 100px;
+    position: absolute;
+    top: 45px;
+    right: 350px;
+    z-index: 1;
+}
+
+.shell {
+    width: 100px;
+    position: absolute;
+    top: 45px;
+    right: 380px;
+    z-index: 1;
+}
