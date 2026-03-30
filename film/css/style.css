@@ -1,0 +1,220 @@
+/* ============================================================
+   File: style.css
+   Projekt: Film Empfehlungen
+   Autoren: Teodora Stokic & Margarita Grigoreva
+   Datum: 23.03.2026
+   Beschreibung: Stylesheet für alle Seiten der Webseite
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Sans:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(228, 219, 182);
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+
+.titel {
+    margin: 20px 20px 0 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+nav img {
+    height: 38px;
+    width: 38px;
+}
+
+.welcome {
+    margin: 60px 120px 0 120px;
+}
+
+main {
+    margin: 60px 120px 80px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.genre-box {
+    background-color: rgba(210, 198, 155, 0.5);
+    border: 1px solid rgba(94, 61, 33, 0.3);
+    padding: 30px 35px 35px 35px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+
+.genre-box:hover {
+    background-color: rgba(190, 175, 130, 0.6);
+    border-color: rgba(94, 61, 33, 0.6);
+}
+
+.genre-box h2 {
+    margin: 0;
+}
+
+.genre-box hr {
+    margin: 16px 0;
+}
+
+.genre-box p {
+    color: rgb(94, 61, 33);
+    margin: 8px 0 12px 0;
+    font-size: 0.95em;
+}
+
+.see-all {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: rgb(94, 61, 33);
+    text-decoration: underline;
+}
+
+main a {
+    color: rgb(94, 61, 33);
+}
+
+main a:hover {
+    color: rgba(1, 36, 3, 0.5);
+    transition: color 0.5s;
+}
+
+main.film-liste {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+main.film-liste article img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+footer {
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 40px;
+    color: rgb(94, 61, 33);
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Mea Culpa", cursive;
+    font-size: 4em;
+    font-weight: 400;
+    color: rgb(94, 61, 33);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+h2 {
+    font-family: "Mea Culpa", cursive;
+    font-size: 3em;
+    font-weight: 400;
+    color: rgb(94, 61, 33);
+    margin: 40px 0 20px 0;
+}
+
+p {
+    margin: 10px 0 20px 0;
+    color: rgb(0, 0, 0);
+}
+
+strong {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.caption {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 20px 0;
+    color: rgb(94, 61, 33);
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid rgb(0, 0, 0);
+    margin: 20px 0;
+}
+
+ul {
+    margin: 0 0 20px 15px;
+}
+
+
+::selection {
+    background: rgb(94, 61, 33);
+    color: rgb(255, 255, 255);
+}
+
+/* Media Query: Diese Regeln gelten NUR wenn das Browserfenster
+   maximal 768px breit ist (z.B. auf Smartphones).
+   Das 2-Spalten-Grid wird auf eine einzige Spalte reduziert. */
+@media (max-width: 768px) {
+    main,
+    main.film-liste {
+        grid-template-columns: 1fr;
+        margin: 30px 20px 40px 20px;
+        gap: 20px;
+    }
+
+    .welcome {
+        margin: 30px 20px 0 20px;
+    }
+
+    header {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+}
